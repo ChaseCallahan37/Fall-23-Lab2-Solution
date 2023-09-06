@@ -7,6 +7,8 @@ string userInput;
 // Input Declarations
 int numberOfPies;
 int amountOfToppings;
+double driversTip;
+
 double serviceFee;
 
 // Outputs
@@ -22,6 +24,11 @@ System.Console.WriteLine("How many topping were selected?");
 userInput = Console.ReadLine();
 amountOfToppings = int.Parse(userInput);
 
-orderCost = DRIVERS_WAGE + (COST_OF_PIE * numberOfPies) + (COST_OF_TOPPING * amountOfToppings);
+System.Console.WriteLine("What is the driver's tip?");
+userInput = Console.ReadLine();
+driversTip = double.Parse(userInput);
+
+
+orderCost = DRIVERS_WAGE + driversTip + (COST_OF_PIE * numberOfPies) + (COST_OF_TOPPING * amountOfToppings);
 
 System.Console.WriteLine("Your total order cost is: $" + orderCost);
